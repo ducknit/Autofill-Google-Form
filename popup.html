@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Form Autofiller</title>
+    <style>
+        body {
+            font-family: Arial;
+            padding: 10px;
+            width: 300px;
+        }
+
+        input,
+        select {
+            width: 95%;
+            margin: 5px 0;
+        }
+
+        button {
+            width: 100%;
+            margin: 10px 0;
+            padding: 8px;
+        }
+
+        #fields {
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Saved Fields</h3>
+    <div id="fields"></div> <!-- 🔧 This is the missing part -->
+
+    <input type="text" id="aliases" placeholder="Aliases (comma-separated)">
+    <input type="text" id="key" placeholder="Field name (e.g., name)">
+    <input type="text" id="value" placeholder="Value">
+    <select id="type">
+        <option value="text">Text</option>
+        <option value="email">Email</option>
+        <option value="phone">Phone</option>
+        <option value="number">Number</option>
+        <option value="date">Date (yyyy-mm-dd)</option>
+        <option value="dropdown">Dropdown</option>
+        <option value="radio">Radio</option>
+        <option value="checkbox">Checkbox</option>
+        <option value="button">Button Label</option>
+    </select>
+
+    <button id="save">Save Field</button>
+    <button id="fill">Fill Form Now</button>
+
+    <script src="popup.js"></script>
+</body>
+
+</html>
